@@ -18,7 +18,7 @@ consumption$Time <- strptime(consumption$Time, "%H:%M:%S")
 date(consumption$Time) <- consumption$Date # replace date component of Time field with data from Date field
 
 # plot graph and send to plot3.png
-png(file="plot3.png")
+png(file="plot3.png", height=480, width=480)
 with(consumption, plot(Time, Sub_metering_1, type="l", col="black", xlab="", ylab="Energy sub metering"))
 with(consumption, points(Time, Sub_metering_2, type="l", col="red"))
 with(consumption, points(Time, Sub_metering_3, type="l", col="blue"))

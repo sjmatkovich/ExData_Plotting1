@@ -18,6 +18,6 @@ consumption$Time <- strptime(consumption$Time, "%H:%M:%S")
 date(consumption$Time) <- consumption$Date # replace date component of Time field with data from Date field
 
 # plot graph and send to plot2.png
-png(file="plot2.png")
+png(file="plot2.png", height=480, width=480)
 with(consumption, plot(Time, Global_active_power, type="l", ylab="Global Active Power (kilowatts)"))
 dev.off()
